@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ragistration Form</title>
+  <style>
+    #d6{
+     padding:2px ;
+    }
+    button{
+      color: black;
+      width:100px;
+      background-color: yellow;
+      border: none;
+      border-radius:px;
+      padding: 5px;
+      font-size: 16px;
+      
+    }
+    #d9{
+      background: linear-gradient(45deg,pink,skyblue);
+      border: 2px solid gray;
+      border-radius: 10px;
+    }
+    #d10{
+      font-size: 30px;
+      font-weight: bold;
+    }
+  
+    #d-15{
+      height: 40px;
+    }
+    #n7{
+      width: 80%;
+      border-radius: 5px;
+      font-size: 30px;
+      font-weight: 900;
+      
+    }
+    a :active{
+      background: linear-gradient(pink, blue);
+      color: wheat;
+      transition: all 200ms  ;
+    }
+    #d-13{
+      width: 95%;
+      padding: 5px;
+    }
+    #d-12{
+      width: 95%;
+      padding: 5px;
+    }
+    #d-0{
+      width: 95%;
+      padding: 5px;
+    }
+    #d-6{
+      width: 95%;
+      padding:5px;
+      
+    }
+     
+     #d5{
+       width: 95%;
+       padding: 5px;
+     }
+     #d4{
+       width: 95%;
+       padding: 5px;
+       
+     }
+     #d-15{
+       width: 98%;
+     }
+     #{
+       width: ,95%;
+       
+     }
+     #d2{
+       width: 70%;
+       padding:5px;
+     }
+     #gone{
+    margin-left:5px;
+    padding: 5px;
+    width: 97%;
+     }
+     #dt{
+       width: 100%;
+       padding: 5px;
+     }
+     #d-14{
+       width: 99%;
+       padding: 5px;
+     }
+     #d3{
+       width: 96%;
+       padding: 5px;
+     }
+     #d6{
+       padding: 5px;
+     }
+  </style>
+</head>
+
+<body class="d8">
+<table  border="0" align="center" width="400px" cellpadding="10px" id="d9" class="w3-container">
+<form action="mailto: anshukashyap9335@gmail.com" id="myform" onsubmit="return validateForm" method="post">
+  
+  <th colspan="2" align="center" id="d10">Ragistration From </th>
+  <tr>
+    <td>First Name </td>
+    <td>
+      <input type="text" placeholder="Enter your first name" id="d-13" name="firstname" oninput="typer()" required>
+    </td>
+  </tr>
+  <tr>
+    <td>Last Name </td>
+    <td>
+      <input type="text" placeholder="Enter your last name" name="lastname" id="d-12" required>
+    </td>
+  </tr>
+  <tr>
+  <td>Father Name</td>
+  <td>
+  <input type="text" placeholder="Enter father name" id="d-0" name="fathername" required>
+  </td>
+  </tr>
+  <tr>
+   <td>Mother Name </td>
+  <td>
+  <input type="text" placeholder="Enter mother name" id="d-6" name="mothername" required>
+  </td>
+  </tr>
+  <tr>
+    <td>E-mail </td>
+    <td>
+      <input type="username" placeholder="Enter your email"  name="e-mail" id="d5" required>
+    </td>
+  </tr>
+  <tr>
+    <td>Password </td>
+    <td>
+      <input type="password"  placeholder="Enter your password"  name="password" maxlength="8" id="d4" required>
+      
+    </td>
+  </tr>
+  <tr>
+    <td>Address </td>
+    <td>
+     <input type="text" name="Address" id="d-15" placeholder="Enter your address" required> 
+    </td>
+  </tr>
+  <tr>
+    <td>Select course </td>
+    <td id="d5">
+      <select id="gone">
+        
+        <option>Select your course</option>
+        <option>Bachelor of Computer Application</option>
+        <option>BBS </option>
+        <option>BBA</option>
+        <option>B.COM</option>
+        <option> B.TECH </option>
+        <option>MCA</option>
+        <option>MA</option>
+        <option>BSC</option>
+      </select>
+     
+    </td>
+  </tr>
+  <tr>
+    <td>Gender </td>
+    <td>
+      <input type="radio" id="g-1" name="gender" required>
+      <label for="g-1">Male</label>
+      <input type="radio" id="g-2" name="gender" required>
+      <label for="g-2">Female</label>
+      <input type="radio" id="g-3" name="gender" required>
+      <label for="g-3">Other</label>
+      
+    </td>
+    </td>p[]
+  </tr>
+  <tr>
+    <td>CollegeName</td>
+    <td>
+     <select id="dt" required>
+       <option>Select your College name </option>
+       <option>Oxford group of institutions Farrukhabad </option>
+       <option>PSIT college kanpur </option>
+       <option>SSRM dehli university</option>
+       <option>Dehli university </option>
+       
+     </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Date of birth </td>
+    <td>
+      <input type="date" name="date" id="d3" required>
+    </td>
+  </tr>
+  <tr>
+    <td>Mobile No.</td>
+    <td>
+      <select id="d6" required>
+        <option>+91</option>
+        <option>(+91)</option>
+        <option>(+93)</option>
+        <option>(+355)</option>
+		<option>(+92)</option>
+            <input type="tel" placeholder="Enter your number" name="number"  id="d2" required >
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Select state</td>
+    <td>
+      <select id="d-14" name="selectstate" required >
+        <option>Select your State</option>
+        
+        <option> Jammu and Kashmir </option>
+        <option>Himachal Pradesh </option>
+        <option>Dadar and Nagar haveli </option>
+        <option>Madhya Pradesh</option>
+        <option>Manipur </option>
+        <option>Meghalaya </option>
+        <option>Uttar Pradesh</option>
+        <option> TamilNadu </option>
+        <option>Telangana </option>
+        <option>Hyderabad </option>
+        <option>Indore </option>
+      </select>
+    </td>
+  </tr>
+ <tr>
+   <td id="d7" colspan="2" align="center">
+     <a href="#"> <button id="n7" type="Submit">Apply Now</button></a>
+   </td>
+  
+  </tr>
+
+  </Form>
+</table>
+<script>
+function validateForm(){
+const b=document.getElementById("d2"). value;
+const c=document.getElementById("d3"). value;
+const d=document.getElementById("g-1").value;
+const e=document.getElementById("g-2"). value;
+const f=document.getElementById("g-3"). value;
+const g=document.getElementById("d4"). value;
+const h=document.getElementById("d5"). value;
+const i=document.getElementById("d-6"). value;
+const j=document.getElementById("d-0").value;
+const k=document.getElementById("d-12"). value;
+const l=document.getElementById("d-13"). value;
+const m=document.getElementById("d-14"). value;
+const n=document.getElementById("d-15"). value.
+const o=document.getElementById("myform"). value;
+if(a=="" || b==""|| c==""|| d==""|| e==""|| f=="" || g==""|| h=="" || i=="" || j=="" || k=="" || l=="" || m=="" || n=="" || o=="" || p=="");
+{
+alert("ALL field are mandatory");
+return false;
+}
+else if(g.length<8||g.length>8)
+{
+alert( number should be of 8 digits! please enter valid number);
+return false;
+}
+ let mobile=document.getElementById("d2").value;
+if(d2.lenght <10  || d2.length >10){
+  alert("Mobile no");
+}
+let age=document.getElementById("d3").value;
+ if(d3.length!==18){
+   alert("You are an adult ")
+   return false;
+ }
+ 
+ {
+else
+{
+true;
+}
+var email = document.forms['myform']["d5"].value;
+if(d5=="" || d5.length>15){
+alert("email should be not empty ")
+}
+function typer(){
+  let put=document.getElementById("d-13").value;
+  console.log("put")
+}
+}
+
+else {
+  
+}
+</script>
+</body>
+
+</html>
