@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>Intro component with sign-up for</title>
+  <style>
+    .container1{
+      width: 200%;
+      height:700px;
+      background-color: rgb(255,106,116);
+      display: flex;
+    }
+    .container2{
+      width:295px;
+      height: 100px;
+      display: block;
+      color: white ;
+      margin-top: 220px;
+      margin-left: 50px;
+   
+    }
+    h1{
+      font-size: 35px;
+      font-weight: bold;
+    }
+    .container3{
+      width: 330px;
+      height: 200px;
+      display: block;
+      margin-top: 50px;
+      margin-right: 20px;
+      margin-left: 60px;
+    }
+    input{
+      width: 250px;
+      margin-top: 30px;
+      padding: 15px;
+      border: 2px solid lightgray ;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    form{
+      background-color: white;
+      width: 330px;
+      height:250%; 
+      border-radius: 5px;
+      box-shadow: 1px 2px 1px black;
+    }
+    #sub{
+      width:280px;
+      background-color: #00BF8A ;
+      border: none;
+      border-radius: 5px;
+      color: floralwhite;
+      font-size: 15px;
+      font-weight: bold;
+      border-bottom: 2px solid #00BF8A;
+      height:50px;
+      margin-top: 15px;
+    }
+    #vb{
+      background-color: slateblue;
+      padding: 10px;
+      padding-left: 10px;
+      border-radius: 3px;
+      color: white ;
+      margin-bottom: 15px;
+      box-shadow: 1px 2px 1px black ;
+    }
+    p{
+      color: white ;
+    }
+    #dtr{
+      color:darkgrey;
+      margin-top: 15px;
+      gap: 1.8rem;
+    }
+    a{
+      color: hsl(0,100%,74%);
+      font-weight: bold;
+    }
+    button:hover{
+      opacity: 0.7;
+    }
+   
+  </style>
+</head>
+
+<body>
+<div class="container1" >
+  <div class="container2">
+    <h1>Learn to code by watching others</h1>
+    <p>See how experienced developers solve problems in real-time watching scripted tutorials is great,but understanding how developers think is invaluable</p>
+  </div>
+  <div class="container3" >
+  <div id="vb" > <span align="center" ><strong>Try it free 7 days </strong></span><span>then $20/mo. thereafter</span></div>
+    <form align="center" id="form" >
+     <input type="text" placeholder="First Name" id="first-name" onblur="blurFirstName()" align="center" >
+     <label id="first-name-label" for="first-name" ></label>
+     <input type="text" placeholder="Last Name" id="last-name" align="center" >
+        <label id="last-name-label" for="last-name" ></label>
+          <input type="email" placeholder="Email Address" id="email-address" align="center" >
+                  <label id="email-address-label" for="email-address" ></label>
+     <input type="password" placeholder="Password" id="password" align="center" >
+              <label id="password-label" for="password" ></label>
+     <button id="sub">CLAIM YOUR FREE TRIAL</button>
+     <div id="dtr" >By clicking the button, you are agreeing to our<a href="_blank">Terms and Services</a></div>
+    </form>
+  </div>
+</div>
+<script>
+  
+  /* Getting input elements */
+const firstName = document.getElementById("first-name")
+const lastName = document.getElementById("last-name")
+const emailAddress = document.getElementById("email-address")
+const password = document.getElementById("password")
+
+/* Getting label elements */
+const firstNameLabel = document.getElementById("first-name-label")
+const lastNameLabel = document.getElementById("last-name-label")
+const emailAddressLabel = document.getElementById("email-address-label")
+const passwordLabel = document.getElementById("password-label")
+
+/* Assigning name and password format */
+let nameFormat = /^[a-zA-Z\s]+$/
+let emailFormat = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
+let passwordFormat = /^[A-Za-z]\w{7,14}$/
+
+/* Checking Inputs based on blur event listener */
+function blurFirstName () {
+    if (!firstName.value) {
+        firstNameLabel.innerHTML = "First Name cannot be empty"
+    }
+    else{
+        if (nameFormat.test(firstName.value)) {
+            firstNameLabel.innerHTML = ""
+        }
+        else{
+            firstNameLabel.innerHTML = "First Name is not correct"
+        }
+    }
+}
+
+function blurLastName () {
+    if (!lastName.value) {
+        lastNameLabel.innerHTML = "Last Name cannot be empty"
+    }
+    else{
+        if (nameFormat.test(lastName.value)) {
+            lastNameLabel.innerHTML = ""
+        }
+        else{
+            lastNameLabel.innerHTML = "Last Name is not correct"
+        }
+    }
+}
+
+function blurEmailAddress () {
+    if (!emailAddress.value) {
+        emailAddressLabel.innerHTML = "Email Address cannot be empty"
+    }
+    else{
+        if (emailFormat.test(emailAddress.value)) {
+            emailAddressLabel.innerHTML = ""
+        }
+        else{
+            emailAddressLabel.innerHTML = "Email Address is not correct"
+        }
+    }
+}
+
+function blurPassword () {
+    if (!password.value) {
+        passwordLabel.innerHTML = "Password cannot be empty"
+    }
+    else{
+        if (passwordFormat.test(password.value)) {
+            passwordLabel.innerHTML = ""
+        }
+        else{
+            passwordLabel.innerHTML = "Password is not correct"
+        }
+    }
+}
+
+/* Checking submit response */
+function checkFirstName() {
+    if (!firstName.value) {
+        firstNameLabel.innerHTML = "First Name cannot be empty"
+    }
+    else{
+        if (nameFormat.test(firstName.value)) {
+            firstNameLabel.innerHTML = ""
+        }
+        else{
+            firstNameLabel.innerHTML = "First Name is not correct"
+        }
+    }
+}
+
+function checkLastName() {
+    if (!lastName.value) {
+        lastNameLabel.innerHTML = "Last Name cannot be empty"
+    }
+    else{
+        if (nameFormat.test(lastName.value)) {
+            lastNameLabel.innerHTML = ""
+        }
+        else{
+            lastNameLabel.innerHTML = "Last Name is not correct"
+        }
+    }
+}
+
+function checkEmailAddress() {
+    if (!emailAddress.value) {
+        emailAddressLabel.innerHTML = "Email Address cannot be empty"
+    }
+    else{
+        if (emailFormat.test(emailAddress.value)) {
+            emailAddressLabel.innerHTML = ""
+        }
+        else{
+            emailAddressLabel.innerHTML = "Email Address is not correct"
+        }
+    }
+}
+
+function checkPassword() {
+    if (!password.value) {
+        passwordLabel.innerHTML = "Password cannot be empty"
+    }
+    else{
+        if (passwordFormat.test(password.value)) {
+            passwordLabel.innerHTML = ""
+        }
+        else{
+            passwordLabel.innerHTML = "Password is not correct"
+        }
+    }
+}
+
+document.getElementById("form").addEventListener("submit", event => {
+    event.preventDefault()
+
+    checkFirstName()
+    checkLastName()
+    checkEmailAddress()
+    checkPassword()
+})
+</script>
+</body>
+
+</html>
